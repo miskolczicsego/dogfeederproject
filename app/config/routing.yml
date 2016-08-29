@@ -1,0 +1,31 @@
+#app_user:
+#    resource: "@UserBundle/Controller/UserController.php"
+#    type:     annotation
+#user_routes:
+#    resource: "@UserBundle/Controller"
+#    type: annotation
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+homepage:
+    path:           /
+    defaults:       {_controller: FOSUserBundle:Profile:show}
+
+python:
+    path:           /action
+    defaults:       {_controller: AppBundle:Default:index}
+#reg_show:
+#    path:           /register/{_locale}
+#    defaults:       {_controller: AppBundle:Register:register, _locale: hu}
+##login:
+##    path:           /login
+##    defaults:       {_controller: UserBundle:Security:login}
+##login_check:
+##    path:           /login_check
+##    defaults:       {_controller: UserBundle:Security:loginCheck}
+##logout:
+##    path:           /logout
+#success:
+#    path:           /success
+#    defaults:       {_controller: AppBundle:Default:success}
+
